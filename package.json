@@ -1,0 +1,16 @@
+{
+  "name": "webrtc-huller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webrtc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@toverux/expresse": "^2.4.0",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}

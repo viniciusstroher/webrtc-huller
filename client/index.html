@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script type="text/javascript" src="./signalingChannel.js"></script>
+        <script type="text/javascript" src="./webrtc.js"></script>
+        <script type="text/javascript">
+            (async () => {
+                const signalToken = "46070D4BF934FB0D4B06D9E2C46E346944E322444900A435D7D9A95E6D7435F5"
+                const webRtc = new WebRtc()
+                
+                await webRtc.userMedia()
+                
+                const signalingChannel = new SignalingChannel(signalToken, webRtc)
+
+                document.querySelector(".btn").addEventListener('click', () => {
+                    signalingChannel.sendData({event:'ligando', para: 'kapeta'})
+                })
+            })()
+        </script>
+    </head>
+    <body>
+        <h1>Teste WEBRTC</h1>
+        <button class="btn">
+            Post!
+        </button>
+    </body>
+</html>
